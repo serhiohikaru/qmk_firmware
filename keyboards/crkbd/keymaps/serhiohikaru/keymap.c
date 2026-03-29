@@ -23,9 +23,9 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
 // BASE
 [_BASE] = LAYOUT_split_3x6_3(
-KC_NO, KC_Q, KC_W, KC_E, KC_R, KC_T,       KC_Z, KC_U, KC_I, KC_O, KC_P, KC_NO,
+KC_NO, KC_Q, KC_W, KC_E, KC_R, KC_T,       KC_Y, KC_U, KC_I, KC_O, KC_P, KC_NO,
 KC_NO, HM_A, HM_S, HM_D, HM_F, KC_G,       KC_H, HM_J, HM_K, HM_L, HM_OE, KC_NO,
-KC_NO, KC_Y, KC_X, KC_C, KC_V, KC_B,       KC_N, KC_M, KC_COMM, KC_DOT, KC_MINS, KC_NO,
+KC_NO, KC_Z, KC_X, KC_C, KC_V, KC_B,       KC_N, KC_M, KC_COMM, KC_DOT, KC_MINS, KC_NO,
 
                 LT(_NUM, KC_TAB), LT(_NAV, KC_SPC), KC_BSPC,
                 LT(_FUN, KC_ESC), LT(_SYM, KC_ENT), KC_DEL
@@ -38,7 +38,7 @@ _______, KC_LEFT, KC_DOWN, KC_RGHT, KC_PGDN, _______,   MS_LEFT, MS_DOWN, MS_UP,
 _______, _______, _______, _______, _______, _______,   MS_WHLL, MS_WHLD, MS_WHLU, MS_WHLR, _______, _______,
 
                 _______, _______, _______,
-                _______, _______, _______
+                MS_BTN1, MS_BTN2, MS_BTN3
 ),
 
 // NUM
