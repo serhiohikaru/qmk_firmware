@@ -8,6 +8,7 @@ enum layers {
     _FUN
 };
 
+
 // Home Row Mods
 #define HM_A LGUI_T(KC_A)
 #define HM_S LSFT_T(KC_S)
@@ -64,7 +65,7 @@ _______, KC_GRV,  KC_TILD, KC_BSLS, KC_SLSH, KC_UNDS,   KC_COLN, KC_SCLN, KC_DQU
 // F KEYS
 [_FUN] = LAYOUT_split_3x6_3(
 _______, KC_F1, KC_F2, KC_F3, KC_F4, KC_F5,   KC_F6, KC_F7, KC_F8, KC_F9, KC_F10, _______,
-_______, _______, _______, _______, _______, _______,   KC_F11, KC_F12, _______, _______, _______, _______,
+_______, QK_RGB_MATRIX_OFF, QK_RGB_MATRIX_ON, _______, _______, _______,   KC_F11, KC_F12, _______, _______, _______, _______,
 _______, _______, _______, _______, _______, _______,   _______, _______, _______, _______, _______, _______,
 
                 _______, _______, _______,
