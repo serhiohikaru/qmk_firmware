@@ -68,7 +68,7 @@ _______, _______, _______, _______, _______, _______,   KC_0,    KC_1,    KC_2, 
 [_SYM] = LAYOUT_split_3x6_3(
 _______, KC_EXLM, KC_AT,   KC_HASH, KC_DLR,  KC_PERC,   KC_CIRC, KC_AMPR, KC_ASTR, KC_LPRN, KC_RPRN, _______,
 _______, KC_LCBR, KC_RCBR, KC_LBRC, KC_RBRC, KC_PIPE,   KC_PLUS, KC_MINS, KC_EQL,  KC_LT,   KC_GT,   _______,
-_______, KC_GRV,  KC_TILD, KC_BSLS, KC_SLSH, KC_UNDS,   KC_COLN, KC_SCLN, KC_DQUO, KC_QUOT, KC_COMM, _______,
+_______, KC_GRV,  KC_TILD, KC_BSLS, KC_SLSH, KC_UNDS,   KC_COLN, KC_SCLN, KC_DQUO, KC_QUOT, KC_QUES, _______,
 
                 _______, _______, _______,
                 _______, _______, _______
