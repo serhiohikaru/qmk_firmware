@@ -25,7 +25,8 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 //#define QUICK_TAP_TERM 0
 //#define TAPPING_TERM 100
 
-#define TAPPING_TERM 180
+#define TAPPING_TERM 200
+#define DYNAMIC_TAPPING_TERM_INCREMENT 10
 #define PERMISSIVE_HOLD
 #define HOLD_ON_OTHER_KEY_PRESS
 #define BOTH_SHIFTS_TURNS_ON_CAPS_WORD
