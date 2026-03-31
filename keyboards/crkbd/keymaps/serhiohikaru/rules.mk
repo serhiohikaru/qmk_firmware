@@ -1,5 +1,4 @@
 # rules.mk
-RGBLIGHT_ENABLE = no
-RGBMATRIX_ENABLE = no
 MOUSEKEY_ENABLE = yes
-EXTRAKEY_ENABLE = yes  # optional, falls Media Keys genutzt werden
+CAPS_WORD_ENABLE = yes
+COMBO_ENABLE = yes
