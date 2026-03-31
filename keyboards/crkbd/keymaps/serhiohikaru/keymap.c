@@ -40,8 +40,8 @@ KC_NO, KC_Q, KC_W, KC_E, KC_R, KC_T,       KC_Z, KC_U, KC_I, KC_O, KC_P, KC_NO,
 KC_NO, HM_A, HM_S, HM_D, HM_F, KC_G,       KC_H, HM_J, HM_K, HM_L, HM_OE, KC_NO,
 KC_NO, KC_Y, KC_X, KC_C, KC_V, KC_B,       KC_N, KC_M, KC_COMM, KC_DOT, KC_MINS, KC_NO,
 
-                KC_TAB, LT(_NAV, KC_SPC), LT(_NUM, KC_BSPC),
-                LT(_SYM, KC_ESC), LT(_FUN, KC_ENT), KC_DEL
+                LT(_NAV, KC_TAB), LT(_SYM, KC_SPC), LT(_NUM, KC_BSPC),
+                LT(_FUN, KC_ESC), LT(_SYM, KC_ENT), KC_DEL
 ),
 
 // NAV + Mouse (Vim Style)
