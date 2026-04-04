@@ -32,6 +32,7 @@ combo_t key_combos[] = {
     COMBO(combo_ent, KC_ENT),
 };
 
+
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
 // BASE
@@ -46,8 +47,8 @@ KC_NO, KC_Y, KC_X, KC_C, KC_V, KC_B,       KC_N, KC_M, KC_COMM, KC_DOT, KC_MINS,
 
 // NAV + Mouse (Vim Style)
 [_NAV] = LAYOUT_split_3x6_3(
-_______, _______, _______, MS_BTN4, KC_PGUP, _______,   KC_LEFT, KC_DOWN, KC_UP, KC_RGHT, _______, _______,
-_______, _______, _______, KC_HOME,  KC_END, _______,   MS_LEFT, MS_DOWN, MS_UP, MS_RGHT, _______, _______,
+_______, _______, _______, MS_BTN4, KC_PGUP, _______,   MS_LEFT, MS_DOWN, MS_UP, MS_RGHT, _______, _______,
+_______, _______, _______, KC_HOME,  KC_END, _______,   KC_LEFT, KC_DOWN, KC_UP, KC_RGHT, _______, _______,
 _______, _______, _______, MS_BTN5, KC_PGDN, _______,   MS_WHLL, MS_WHLD, MS_WHLU, MS_WHLR, _______, _______,
 
                 _______, _______, _______,
@@ -58,10 +59,10 @@ _______, _______, _______, MS_BTN5, KC_PGDN, _______,   MS_WHLL, MS_WHLD, MS_WHL
 [_NUM] = LAYOUT_split_3x6_3(
 _______, _______, _______, _______, _______, _______, _______,   KC_7,    KC_8,    KC_9, _______, _______,
 _______, _______, _______, _______, _______, _______, _______,   KC_4,    KC_5,    KC_6, _______, _______,
-_______, _______, _______, _______, _______, _______,   KC_0,    KC_1,    KC_2,    KC_3, _______, _______,
+_______, _______, _______, _______, _______, _______, _______,   KC_1,    KC_2,    KC_3, _______, _______,
 
                 _______, _______, _______,
-                _______, _______, _______
+                KC_0, _______, _______
 ),
 
 // SYMBOLS
@@ -77,7 +78,7 @@ _______, KC_GRV,  KC_TILD, KC_BSLS, KC_SLSH, KC_UNDS,   KC_COLN, KC_SCLN, KC_DQU
 // F KEYS
 [_FUN] = LAYOUT_split_3x6_3(
 _______, KC_F1, KC_F2, KC_F3, KC_F4, KC_F5,   KC_F6, KC_F7, KC_F8, KC_F9, KC_F10, _______,
-_______, QK_RGB_MATRIX_OFF, QK_RGB_MATRIX_ON, _______, DT_UP, DT_DOWN,   KC_F11, KC_F12, _______, _______, _______, _______,
+_______, RM_TOGG, RM_NEXT, _______, DT_UP, DT_DOWN,   KC_F11, KC_F12, _______, _______, _______, _______,
 _______, CM_TOGG, _______, _______, _______, _______,   _______, _______, _______, _______, _______, _______,
 
                 _______, _______, _______,

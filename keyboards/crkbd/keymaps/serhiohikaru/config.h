@@ -30,3 +30,5 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #define PERMISSIVE_HOLD
 #define HOLD_ON_OTHER_KEY_PRESS
 #define BOTH_SHIFTS_TURNS_ON_CAPS_WORD
+
+#define ENABLE_RGB_MATRIX_SOLID_REACTIVE_WIDE
