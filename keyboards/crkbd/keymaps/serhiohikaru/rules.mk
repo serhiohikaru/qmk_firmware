@@ -1,7 +1,10 @@
 # rules.mk
+
+# used in navigation layer
 MOUSEKEY_ENABLE = yes
+
+# used for caps lock alternative
 CAPS_WORD_ENABLE = yes
+
+# enable combos
 COMBO_ENABLE = yes
-DYNAMIC_TAPPING_TERM_ENABLE = yes
-RGB_MATRIX_ENABLE = yes
-RGB_MATRIX_KEYPRESS = yes

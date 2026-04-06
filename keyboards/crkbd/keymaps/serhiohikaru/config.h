@@ -20,15 +20,26 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 #pragma once
 
-//#define USE_MATRIX_I2C
+// RGB Light Configuration
+#define RGB_MATRIX_DEFAULT_MODE RGB_MATRIX_SOLID_COLOR
+#define RGB_MATRIX_DEFAULT_VAL 120
 
-//#define QUICK_TAP_TERM 0
-//#define TAPPING_TERM 100
-
+// how long before a key press becomes a hold
 #define TAPPING_TERM 200
-#define DYNAMIC_TAPPING_TERM_INCREMENT 10
-#define PERMISSIVE_HOLD
+
+// makes tap and hold keys trigger the hold if another key is pressed before
+// releasing, even if it hasn't hit the TAPPING_TERM
+// #define PERMISSIVE_HOLD
+
+// selects the hold action of a dual-role key as soon as the tap of the
+// dual-role key is interrupted by the press of another key.
 #define HOLD_ON_OTHER_KEY_PRESS
+
+// activate Caps Word by simultaneously pressing both shift keys
 #define BOTH_SHIFTS_TURNS_ON_CAPS_WORD
 
-#define ENABLE_RGB_MATRIX_SOLID_REACTIVE_WIDE
+// Holding and releasing a dual-function key without pressing another key will
+// result in nothing happening. With retro tapping enabled, releasing the key
+// without pressing another will send the original keycode even if it is
+// outside the tapping term.
+// #define RETRO_TAPPING
