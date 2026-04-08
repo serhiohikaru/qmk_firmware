@@ -10,25 +10,27 @@ enum layers {
 
 // Home Row Mods
 #define HM_A LGUI_T(KC_A)
-#define HM_S LSFT_T(KC_S)
-#define HM_D LALT_T(KC_D)
+#define HM_R LALT_T(KC_R)
 #define HM_F LCTL_T(KC_F)
 
 #define HM_J RCTL_T(KC_J)
-#define HM_K RALT_T(KC_K)
-#define HM_L RSFT_T(KC_L)
+#define HM_U RALT_T(KC_U)
 #define HM_OE RGUI_T(KC_SCLN)
 
 const uint16_t PROGMEM combo_tab[] = {KC_W, KC_E, COMBO_END};
 const uint16_t PROGMEM combo_spc[] = {KC_X, KC_C, COMBO_END};
 const uint16_t PROGMEM combo_esc[] = {KC_I, KC_O, COMBO_END};
 const uint16_t PROGMEM combo_ent[] = {KC_COMM, KC_DOT, COMBO_END};
+const uint16_t PROGMEM combo_left_shift[] = {KC_S, KC_D, COMBO_END};
+const uint16_t PROGMEM combo_right_shift[] = {KC_K, KC_L, COMBO_END};
 
 combo_t key_combos[] = {
     COMBO(combo_tab, KC_TAB),
     COMBO(combo_spc, KC_SPC),
     COMBO(combo_esc, KC_ESC),
     COMBO(combo_ent, KC_ENT),
+    COMBO(combo_left_shift, KC_LSFT),
+    COMBO(combo_right_shift, KC_RSFT)
 };
 
 
@@ -36,8 +38,8 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
 // BASE
 [_BASE] = LAYOUT_split_3x6_3(
-KC_NO, KC_Q, KC_W, KC_E, KC_R, KC_T,       KC_Z, KC_U, KC_I, KC_O, KC_P, KC_NO,
-KC_NO, HM_A, HM_S, HM_D, HM_F, KC_G,       KC_H, HM_J, HM_K, HM_L, HM_OE, KC_NO,
+KC_NO, KC_Q, KC_W, KC_E, HM_R, KC_T,       KC_Z, HM_U, KC_I, KC_O, KC_P, KC_NO,
+KC_NO, HM_A, KC_S, KC_D, HM_F, KC_G,       KC_H, HM_J, KC_K, KC_L, HM_OE, KC_NO,
 KC_NO, KC_Y, KC_X, KC_C, KC_V, KC_B,       KC_N, KC_M, KC_COMM, KC_DOT, KC_MINS, KC_NO,
 
                 LT(_NAV, KC_TAB), LT(_SYM, KC_SPC), LT(_NUM, KC_BSPC),
