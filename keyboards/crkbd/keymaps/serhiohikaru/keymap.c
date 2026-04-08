@@ -1,75 +1,5 @@
 #include QMK_KEYBOARD_H
-#include "eeprom.h"
 
-#define HEATMAP_EEPROM_ADDR 32
-#define SAVE_INTERVAL 15000
-
-uint16_t heatmap[RGB_MATRIX_LED_COUNT];
-uint32_t save_timer;
-
-// ---------- EEPROM ----------
-void heatmap_load(void) {
-    eeprom_read_block((void*)heatmap,
-                      (const void*)HEATMAP_EEPROM_ADDR,
-                      sizeof(heatmap));
-}
-
-void heatmap_save(void) {
-    eeprom_update_block((const void*)heatmap,
-                        (void*)HEATMAP_EEPROM_ADDR,
-                        sizeof(heatmap));
-}
-
-// ---------- Fixed ranges → solid colors ----------
-rgb_t heat_to_rgb(uint16_t v) {
-    // example ranges (edit freely)
-    if (v < 1)   return (rgb_t){0, 0, 0};       // OFF
-    if (v < 10)  return (rgb_t){0, 0, 255};     // BLUE
-    if (v < 100)  return (rgb_t){0, 255, 0};     // GREEN
-    if (v < 8000)  return (rgb_t){255, 255, 0};   // YELLOW
-    if (v < 20000) return (rgb_t){255, 128, 0};   // ORANGE
-    return (rgb_t){255, 0, 0};                    // RED
-}
-
-// ---------- Keypress ----------
-bool process_record_user(uint16_t keycode, keyrecord_t *record) {
-    if (record->event.pressed) {
-        uint8_t row = record->event.key.row;
-        uint8_t col = record->event.key.col;
-
-        uint8_t index = g_led_config.matrix_co[row][col];
-        if (index != NO_LED) {
-            heatmap[index]++;
-        }
-    }
-    return true;
-}
-
-// ---------- LED Rendering ----------
-bool rgb_matrix_indicators_advanced_user(uint8_t led_min, uint8_t led_max) {
-    for (uint8_t i = led_min; i < led_max; i++) {
-        rgb_t c = heat_to_rgb(heatmap[i]);
-        RGB_MATRIX_INDICATOR_SET_COLOR(i, c.r, c.g, c.b);
-    }
-    return false;
-}
-
-// ---------- Save ----------
-void matrix_scan_user(void) {
-    if (timer_elapsed32(save_timer) > SAVE_INTERVAL) {
-        heatmap_save();
-        save_timer = timer_read32();
-    }
-}
-
-// ---------- Init ----------
-void keyboard_post_init_user(void) {
-    heatmap_load();
-    save_timer = timer_read32();
-
-    rgb_matrix_mode_noeeprom(RGB_MATRIX_SOLID_COLOR);
-    rgb_matrix_sethsv_noeeprom(HSV_OFF);
-}
 enum layers {
     _BASE,
     _NAV,
@@ -77,7 +7,6 @@ enum layers {
     _SYM,
     _FUN
 };
-
 
 // Home Row Mods
 #define HM_A LGUI_T(KC_A)
