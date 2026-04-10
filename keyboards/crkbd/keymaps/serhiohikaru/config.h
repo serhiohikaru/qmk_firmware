@@ -43,3 +43,30 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 // without pressing another will send the original keycode even if it is
 // outside the tapping term.
 // #define RETRO_TAPPING
+
+// RGB Matrix Effect Typing Heatmap
+// This effect will color the RGB matrix according to a heatmap of recently
+// pressed keys. Whenever a key is pressed its "temperature" increases as well
+// as that of its neighboring keys. The temperature of each key is then
+// decreased automatically every 25 milliseconds by default.
+
+// In order to change the delay of temperature decrease define
+#define RGB_MATRIX_TYPING_HEATMAP_DECREASE_DELAY_MS 10000
+
+// As heatmap uses the physical position of the leds set in the g_led_config,
+// you may need to tweak the following options to get the best effect for your
+// keyboard. Note the size of this grid is 224x64.
+
+// Limit the distance the effect spreads to surrounding keys.
+#define RGB_MATRIX_TYPING_HEATMAP_SPREAD 20
+
+// Limit how hot surrounding keys get from each press.
+#define RGB_MATRIX_TYPING_HEATMAP_AREA_LIMIT 8
+
+// Remove the spread effect entirely.
+// #define RGB_MATRIX_TYPING_HEATMAP_SLIM
+
+// It's also possible to adjust the tempo of heating up. It's defined as the
+// number of shades that are increased on the HSV scale. Decreasing this value
+// increases the number of keystrokes needed to fully heat up the key.
+#define RGB_MATRIX_TYPING_HEATMAP_INCREASE_STEP 16
