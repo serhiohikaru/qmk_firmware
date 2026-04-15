@@ -51,17 +51,17 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 // decreased automatically every 25 milliseconds by default.
 
 // In order to change the delay of temperature decrease define
-#define RGB_MATRIX_TYPING_HEATMAP_DECREASE_DELAY_MS 10000
+#define RGB_MATRIX_TYPING_HEATMAP_DECREASE_DELAY_MS 1000000
 
 // As heatmap uses the physical position of the leds set in the g_led_config,
 // you may need to tweak the following options to get the best effect for your
 // keyboard. Note the size of this grid is 224x64.
 
 // Limit the distance the effect spreads to surrounding keys.
-#define RGB_MATRIX_TYPING_HEATMAP_SPREAD 20
+#define RGB_MATRIX_TYPING_HEATMAP_SPREAD 1
 
 // Limit how hot surrounding keys get from each press.
-#define RGB_MATRIX_TYPING_HEATMAP_AREA_LIMIT 8
+#define RGB_MATRIX_TYPING_HEATMAP_AREA_LIMIT 1
 
 // Remove the spread effect entirely.
 // #define RGB_MATRIX_TYPING_HEATMAP_SLIM
@@ -69,4 +69,4 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 // It's also possible to adjust the tempo of heating up. It's defined as the
 // number of shades that are increased on the HSV scale. Decreasing this value
 // increases the number of keystrokes needed to fully heat up the key.
-#define RGB_MATRIX_TYPING_HEATMAP_INCREASE_STEP 16
+#define RGB_MATRIX_TYPING_HEATMAP_INCREASE_STEP 2
