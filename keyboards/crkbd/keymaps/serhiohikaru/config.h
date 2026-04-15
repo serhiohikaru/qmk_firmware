@@ -25,7 +25,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #define RGB_MATRIX_DEFAULT_VAL 120
 
 // how long before a key press becomes a hold
-#define TAPPING_TERM 300
+#define TAPPING_TERM 600
 
 // makes tap and hold keys trigger the hold if another key is pressed before
 // releasing, even if it hasn't hit the TAPPING_TERM
