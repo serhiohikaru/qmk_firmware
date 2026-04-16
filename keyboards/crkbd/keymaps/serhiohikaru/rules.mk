@@ -8,3 +8,6 @@ CAPS_WORD_ENABLE = yes
 
 # enable combos
 COMBO_ENABLE = yes
+
+# dynamic tapping term allows to change tapping term in runtime
+DYNAMIC_TAPPING_TERM_ENABLE = yes
