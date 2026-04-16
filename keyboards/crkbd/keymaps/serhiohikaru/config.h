@@ -33,7 +33,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 // selects the hold action of a dual-role key as soon as the tap of the
 // dual-role key is interrupted by the press of another key.
-#define HOLD_ON_OTHER_KEY_PRESS
+// #define HOLD_ON_OTHER_KEY_PRESS
 
 // activate Caps Word by simultaneously pressing both shift keys
 #define BOTH_SHIFTS_TURNS_ON_CAPS_WORD
