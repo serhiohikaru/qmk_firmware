@@ -25,7 +25,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #define RGB_MATRIX_DEFAULT_VAL 120
 
 // how long before a key press becomes a hold
-#define TAPPING_TERM 300
+#define TAPPING_TERM 200
 
 // value of the increment or decrement of the dynamic tapping term
 #define DYNAMIC_TAPPING_TERM_INCREMENT 50
